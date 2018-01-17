@@ -11,7 +11,7 @@ const getData = async () => {
 const render  = (data) => {
     document.getElementById("taskList").innerHTML = '<ul class="task-list">' + data.map( task => `
         <li taskId="${task.id}" class='task-${task.id} task' >
-            <input type="checkbox" class="task__checkbox">
+            <input type="checkbox" class="task__checkbox" ${task.checked}>
             <p class="task__text">${task.text}</p>
             <button class="task__remove-button">Remove</button>
             <button class="task__edit-button">Edit</button>
@@ -45,19 +45,48 @@ document.getElementById("taskList")
                 document.addEventListener("keydown", async (event) => {
                     if (event.keyCode === 13) {
                         let text = editInput.value;
-                        textNode.textContent = text;
-                        t.removeChild(editInput);
-                        textNode.style.zIndex = 0;
-                        await fetch(host + id, {
-                            method: 'PATCH',
-                            headers: {
-                                "Content-type": "application/json"
-                            },
-                            body: JSON.stringify({text})
-                        });
+                        if (text !== "") {
+                            textNode.textContent = text;
+                            t.removeChild(editInput);
+                            textNode.style.zIndex = 0;
+                            await fetch(host + id, {
+                                method: 'PATCH',
+                                headers: {
+                                    "Content-type": "application/json"
+                                },
+                                body: JSON.stringify({text})
+                            });
+                        } else {
+                            alert("Write a task!!!")
+                        }
+                    } else if (event.keyCode === 27) {
+                            t.removeChild(editInput);
+                            textNode.style.zIndex = 0;
                     }
                 })
             }
+        } else if (button.classList.contains("task__checkbox")) {
+            const id = button.parentElement.getAttribute("taskId");
+            let parentNode = document.getElementsByClassName('task-' + id)[0];
+            let isChecked = parentNode.children[0].checked;
+            let text = parentNode.children[1].textContent;
+            let checked = "";
+            if (isChecked) {
+                checked = "checked"
+            }
+            //     parentNode.style.backgroundColor = "#AF4D0C";
+            //     parentNode.children[1].style.color = "#d9ad7c";
+            // } else {
+            //     parentNode.style.backgroundColor = "#d9ad7c";
+            //     parentNode.children[1].style.color = "#674d3c";
+            // }
+            await fetch(host + id, {
+                method: 'PATCH',
+                headers: {
+                    "Content-type": "application/json"
+                },
+                body: JSON.stringify({text, checked})
+            });
         }
 
     });
@@ -71,6 +100,7 @@ document.getElementById("addTask")
 
         let form = ev.target;
         let text = form["task"].value;
+        let checked = "";
 
         if (text === '') {
             alert("Write a task!!!")
@@ -80,7 +110,7 @@ document.getElementById("addTask")
                 headers: {
                     "Content-type": "application/json"
                 },
-                body: JSON.stringify({text})
+                body: JSON.stringify({text, checked})
             });
 
             form["task"].value = '';
