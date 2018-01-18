@@ -1,29 +1,70 @@
 {
-  "tasks": [
+  "tasks_1": [
     {
-      "text": "asfsdfsdg",
-      "id": 3,
-      "checked": "checked"
+      "text": "Learn JavaScript and CSS",
+      "checked": "",
+      "id": 2
     },
     {
-      "text": "sadsdf",
+      "text": "One more training",
+      "checked": "",
+      "id": 3
+    },
+    {
+      "text": "Do something",
+      "checked": "",
+      "id": 5
+    },
+    {
+      "text": "Prepare for marathon",
+      "checked": "",
+      "id": 6
+    },
+    {
+      "text": "Read about fetch",
+      "checked": "checked",
+      "id": 7
+    },
+    {
+      "text": "objects method and this",
+      "checked": "",
+      "id": 8
+    }
+  ],
+  "tasks_2": [
+    {
+      "text": "Learn Python and Django",
       "checked": "checked",
       "id": 4
     },
     {
-      "text": "saf",
-      "checked": "checked",
+      "text": "Training",
+      "checked": "",
       "id": 5
     },
     {
-      "text": "cnbnhgm",
-      "checked": "checked",
+      "text": "Read 100 pages of a book",
+      "checked": "",
       "id": 6
     },
     {
-      "text": "fdhstjytd",
+      "text": "Read about context of function in js",
       "checked": "",
       "id": 7
+    }
+  ],
+  "tasks_3": [
+    {
+      "text": "water123",
+      "checked": "",
+      "id": 1
+    }
+  ],
+  "tasks_4": [
+    {
+      "text": "water123",
+      "checked": "",
+      "id": 1
     }
   ]
 }

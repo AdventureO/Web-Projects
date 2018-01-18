@@ -1,5 +1,10 @@
 .layout {
-    width: 900px;
-    margin: auto;
     font-family: "Monospaced", CourierNew, serif;
+}
+
+
+.layout1 {
+    width: 850px;
+    float: left;
+    margin: 10px;
 }

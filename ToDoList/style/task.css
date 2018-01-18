@@ -7,22 +7,33 @@
     margin-bottom: 5px;
     background-color: #d9ad7c;
 }
-/*.task:hover {*/
-    /*background-color: #674d3c;*/
-    /*color: #fff2df;*/
-/*}*/
+
+.task:hover {
+    background-color: #674d3c;
+    color: #fff2df;
+}
+
+.task:hover p {
+    color: #fff2df;
+}
+
+.task_checked {
+    background-color: #674d3c;
+    color: #fff2df;
+}
 
 .task__checkbox {
     margin-left: 20px;
 }
-
 
 .task__text {
     margin-left: 20px;
     width: 650px;
     color: #674d3c;
     font-weight: 600;
+    text-decoration: none;
 }
+
 
 .task__edit-button,
 .task__remove-button {
@@ -59,5 +70,13 @@
     align-self: center;
     position: absolute;
     margin-left: 50px;
+}
+
+.task__text_checked {
+    margin-left: 20px;
+    width: 650px;
+    font-weight: 600;
+    text-decoration: line-through;
+    color: #fff2df;
 }
 
