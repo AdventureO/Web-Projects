@@ -1,37 +1,14 @@
 import Carousel from "./carousel";
 
-new Carousel(document.body, [
+let images = [
     'images/fly.jpg',
     'images/bee.jpg',
     'images/bug.jpeg'
-]);
+];
 
-new Carousel(document.body, [
-    'images/fly.jpg',
-    'images/bee.jpg',
-    'images/bug.jpeg'
-]);
-
-new Carousel(document.body, [
-    'images/fly.jpg',
-    'images/bee.jpg',
-    'images/bug.jpeg'
-]);
-
-new Carousel(document.body, [
-    'images/fly.jpg',
-    'images/bee.jpg',
-    'images/bug.jpeg'
-]);
-
-new Carousel(document.body, [
-    'images/fly.jpg',
-    'images/bee.jpg',
-    'images/bug.jpeg'
-]);
-
-new Carousel(document.body, [
-    'images/fly.jpg',
-    'images/bee.jpg',
-    'images/bug.jpeg'
-]);
+new Carousel(document.body, images);
+new Carousel(document.body, images);
+new Carousel(document.body, images);
+new Carousel(document.body, images);
+new Carousel(document.body, images);
+new Carousel(document.body, images);
