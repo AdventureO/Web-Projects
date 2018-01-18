@@ -1,3 +1,34 @@
 .chat-options {
+    object-fit: contain;
+    float: right;
+    margin: 0 7px;
+}
 
+.chat-options__close {
+    width: 18px;
+    height: 18px;
+    margin-top: 8px;
+    margin-bottom: 6px;
+    margin-left: 5px;
+}
+
+.chat-options__cog {
+    width: 12px;
+    height: 12px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.chat-options__video {
+    width: 12px;
+    height: 8px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.chat-options__plus {
+    width: 12px;
+    height: 12px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }

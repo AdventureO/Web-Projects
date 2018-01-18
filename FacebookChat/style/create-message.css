@@ -1,7 +1,17 @@
 .create-message {
-
+    height: 65px;
 }
 
-.create-message__type {
 
+.create-message__input {
+    margin: 10px 0 0 16px;
+    width: 260px;
+    height: 17px;
+    border: none;
+    color: #cdcdcd;
+}
+
+.create-message__line {
+    width: 292px;
+    border: solid 1px #e5e5e5;
 }

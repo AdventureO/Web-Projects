@@ -1,10 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <title>Title</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style/chat-box.css">
+    <link rel="stylesheet" href="style/chat.css">
+    <link rel="stylesheet" href="style/chat-options.css">
+    <link rel="stylesheet" href="style/create-message.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/message.css">
+    <link rel="stylesheet" href="style/message-options.css">
 </head>
 <body>
-
+    <div class="chat-box">
+        <header class="header">
+            <div class="header__presence"></div>
+            <a href="" class="header__name">Kristaps Elsins</a>
+            <img src="images/Close.svg" alt="" class="chat-options chat-options__close">
+            <img src="images/Cog.svg" alt="" class="chat-options chat-options__cog">
+            <img src="images/Video.svg" alt="" class="chat-options chat-options__video">
+            <img src="images/Plus.svg" alt="" class="chat-options chat-options__plus">
+        </header>
+        <section class="chat">
+            <div class="message">
+                <img src="images/userphoto1.jpg" alt="" class="message__user-image">
+                <p class="message__text message__text_friend message__text_normal">
+                    Yo, Can you update views?
+                </p>
+            </div>
+            <time class="chat__date">FRI 11:30AM</time>
+            <div class="message">
+                <img src="images/userphoto1.jpg" alt="" class="message__user-image">
+                <p class="message__text message__text_friend message__text_normal">
+                    I can’t see updated views yet
+                </p>
+            </div>
+            <div class="message">
+                <p class="message__text message__text_my message__text_upper">
+                    Hi, as I noted in Email last week - I am on vacation.
+                </p>
+                <p class="message__text message__text_my message__text_down">
+                    I will be back next week
+                </p>
+            </div>
+            <div class="message clear-fix">
+                <img src="images/userphoto1.jpg" alt="" class="message__user-image">
+                <p class="message__text message__text_friend message__text_upper">
+                    Ahh sorry, missed that!
+                </p>
+                <p class="message__text message__text_friend message__text_down">
+                    Let’s talk next week
+                </p>
+            </div>
+        </section>
+        <section class="create-message">
+            <div class="create-message__line"></div>
+            <input type="text" class="create-message__input" placeholder="Type a message...">
+            <div class="message-options">
+                <img src="images/Picture.svg" alt="" class="message-options__image">
+                <img src="images/Gif.svg" alt="" class="message-options__image">
+                <img src="images/Smile.svg" alt="" class="message-options__image">
+                <img src="images/Calendar.svg" alt="" class="message-options__image">
+                <img src="images/Camera.svg" alt="" class="message-options__image">
+            </div>
+        </section>
+    </div>
 </body>
 </html>

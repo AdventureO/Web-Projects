@@ -1,11 +1,31 @@
 .header {
-
+    width: 292px;
+    height: 32px;
+    border-radius: 4px 4px 0 0;
+    background-color: #2979ff;
+    margin-bottom: -16px;
 }
 
 .header__presence {
-
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #69f0ae;
+    float: left;
+    margin: 12px 0 12px 12px;
 }
 
 .header__name {
+    margin: 8px 0 8px 10px;
+    width: 150px;
+    height: 17px;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+}
 
+.header__name:hover {
+    text-decoration: underline;
 }

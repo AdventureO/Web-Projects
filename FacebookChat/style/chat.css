@@ -1,3 +1,16 @@
 .chat {
+    height: 260px;
+    padding: 24px 16px 18px 16px;
+}
 
+.chat__date {
+    width: 100px;
+    height: 14px;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+    text-align: left;
+    color: #828282;
+    display: block;
+    margin: 0 auto;
 }
