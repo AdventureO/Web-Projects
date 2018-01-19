@@ -1,5 +1,4 @@
 .message {
-
 }
 
 .message__user-image {
@@ -19,25 +18,6 @@
     padding: 6px 11px 6px 11px;
 }
 
-.message__text_normal {
-    margin-top: 8px;
-    border-radius: 100px;
-}
-
-.message__text_upper {
-    margin-bottom: 0;
-    border-radius: 14px 14px 0 14px;
-}
-
-.message__text_down {
-    margin-top: 1px;
-    border-radius: 14px 0 14px 14px;
-}
-
-.message__text_middle {
-    border-radius: 14px  0 14px 14px;
-}
-
 .message__text_my {
     float: right;
     background-color: #2979ff;
@@ -50,6 +30,39 @@
     color: #353535;
 }
 
-.clear-fix {
+.message__text_my-normal,
+.message__text_friend-normal {
+    border-radius: 100px;
+}
+
+.message__text_my-upper {
+    margin-bottom: 0;
+    border-radius: 14px 14px 0 14px;
+}
+
+.message__text_my-middle {
+    border-radius: 14px  0 0 14px;
+}
+
+.message__text_my-down {
+    margin-top: 1px;
+    border-radius: 14px 0 14px 14px;
+}
+
+.message__text_friend-upper {
+    margin-bottom: 0;
+    border-radius: 14px 14px 14px 0 ;
+}
+
+.message__text_friend-middle {
+    border-radius:  0 14px 14px 0;
+}
+
+.message__text_friend-down {
+    margin-top: 1px;
+    border-radius: 0 14px 14px 14px;
+}
+
+.message_clear-fix {
     clear: both;
 }

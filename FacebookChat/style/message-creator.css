@@ -1,17 +1,19 @@
-.create-message {
+.message-creator {
+    width: 292px;
     height: 65px;
 }
 
 
-.create-message__input {
-    margin: 10px 0 0 16px;
+.message-creator__input {
+    margin: 7px 0 0 16px;
     width: 260px;
     height: 17px;
+    font-size: 12px;
     border: none;
     color: #cdcdcd;
 }
 
-.create-message__line {
+.message-creator__line {
     width: 292px;
     border: solid 1px #e5e5e5;
 }
