@@ -1,9 +1,10 @@
 .chat {
     width: 292px;
-    height: 278px;
+    height: 269px;
     background-color: #ffffff;
     margin-top: 9px;
-    /*overflow: auto;*/
+    margin-bottom: 9px;
+    overflow: auto;
 }
 
 .chat__date {
