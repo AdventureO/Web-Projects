@@ -1,0 +1,89 @@
+.calendar {
+    display: grid;
+    grid-row-gap: 5px;
+    grid-template-columns: repeat(7, 84px);
+    grid-template-rows: repeat(2, 40px);
+    margin-bottom: 5px;
+}
+
+.calendar__month {
+    grid-area: 2 / 2 / 2 / 7;
+}
+
+.calendar__year{
+    grid-area: 1 / 2 / 2 / 7;
+}
+
+.calendar__year-month {
+    height: 40px;
+    color: white;
+    background: #cd310d;
+    text-align: center;
+    line-height: 40px;
+}
+
+.calendar__days {
+    border-radius: 3px;
+    height: 80px;
+    width: 80px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 80px;
+}
+
+.calendar__week-days {
+    color: white;
+    background: #cd310d;
+    margin-bottom: 5px;
+}
+
+.calendar__number-days {
+    color: white;
+    background: #8c8c8c;
+}
+
+.calendar__week {
+    display: grid;
+    grid-template-columns: repeat(7, 80px);
+    grid-gap: 5px;
+}
+
+.calendar__month-days {
+    display: grid;
+    grid-template-columns: repeat(7, 80px);
+    grid-template-rows: repeat(5, 80px);
+    grid-gap: 5px;
+}
+
+.calendar__current-day {
+    color: darkgreen;
+    background: greenyellow;
+}
+
+.calendar__button {
+    border: none;
+    background-color: #cd310d;
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+}
+
+.calendar__next-month-button {
+    grid-row: 2 / 3;
+    grid-column: 7;
+}
+
+.calendar__previous-month-button {
+    grid-row: 2 / 3;
+    grid-column: 1;
+}
+
+.calendar__next-year-button {
+    grid-row: 1;
+    grid-column: 7;
+}
+
+.calendar__previous-year-button {
+    grid-row: 1;
+    grid-column: 1;
+}
