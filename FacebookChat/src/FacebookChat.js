@@ -1,6 +1,6 @@
 class FacebookChat {
     constructor(container, image) {
-        this.image = image;
+        this.image = "https://res.cloudinary.com/demo/image/facebook/w_28,h_28/" + image + ".jpg";
         this.root = document.createElement("div");
         this.root.innerHTML = this.initRender();
         this.root.classList.add("chat-box");
@@ -27,33 +27,33 @@ class FacebookChat {
             <a href=""><img src="images/Plus.svg" alt="" class="chat-option chat-option_plus"></a>
         </header>
         <section class="chat">
-            <div class="friend-message">
-                <img src="${this.image}" alt="" class="friend-message__user-image">
-                <p class="friend-message__text friend-message__text_normal">
+            <div class="message message_friend">
+                <img src="${this.image}" alt="" class="message__user-image">
+                <p class="message__text message__text_friend message__text_friend-normal">
                     Yo, Can you update views?
                 </p>
             </div>
             <time class="chat__date">FRI 11:30AM</time>
-            <div class="friend-message">
-                <img src="${this.image}" alt="" class="friend-message__user-image">
-                <p class="friend-message__text friend-message__text_normal">
+            <div class="message message_friend clear-fix">
+                <img src="${this.image}" alt="" class="message__user-image">
+                <p class="message__text message__text_friend message__text_friend-normal">
                     I can’t see updated views yet
                 </p>
             </div>
-            <div class="my-message">
-                <p class="my-message__text my-message__text_upper">
+            <div class="message message_my clear-fix">
+                <p class="message__text message__text_my message__text_my-upper">
                     Hi, as I noted in Email last week - I am on vacation.
                 </p>
-                <p class="my-message__text my-message__text_down">
+                <p class="message__text message__text_my message__text_my-down clear-fix">
                     I will be back next week
                 </p>
             </div>
-            <div class="friend-message friend-message_clear-fix">
-                <img src="${this.image}" alt="" class="friend-message__user-image">
-                <p class="friend-message__text friend-message__text_upper">
+            <div class="message message_friend clear-fix">
+                <img src="${this.image}" alt="" class="message__user-image">
+                <p class="message__text message__text_friend message__text_friend-upper">
                     Ahh sorry, missed that!
                 </p>
-                <p class="friend-message__text friend-message__text_down">
+                <p class="message__text message__text_friend message__text_friend-down">
                     Let’s talk next week
                 </p>
             </div>
@@ -85,18 +85,18 @@ class FacebookChat {
         text = this.escapeHtml(text);
         if (text !== "") {
             messageBar.innerHTML += `
-            <p class="my-message__text my-message__text_normal my-message_clear-fix">
+            <p class="message__text message__text_my message__text_my-normal clear-fix">
                 ${text}
             </p>
             `;
             if (messages.length > 1) {
                 for (let i = 0; i < messages.length; i++) {
                     if (i === 0) {
-                        messages[i].classList = "my-message__text my-message__text_upper my-message_clear-fix";
+                        messages[i].classList = "message__text message__text_my message__text_my-upper clear-fix";
                     } else if (i === messages.length - 1) {
-                        messages[i].classList = "my-message__text my-message__text_down my-message_clear-fix";
+                        messages[i].classList = "message__text message__text_my message__text_my-down clear-fix";
                     } else {
-                        messages[i].classList = "my-message__text my-message__text_middle my-message_clear-fix";
+                        messages[i].classList = "message__text message__text_my message__text_my-middle clear-fix";
                     }
                 }
             }

@@ -1,9 +1,7 @@
 .chat {
-    width: 292px;
-    height: 269px;
+    width: 100%;
+    height: calc(100% - 97px);
     background-color: #ffffff;
-    margin-top: 9px;
-    margin-bottom: 9px;
     overflow: auto;
 }
 
