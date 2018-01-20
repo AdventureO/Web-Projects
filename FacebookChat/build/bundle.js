@@ -72,9 +72,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__FacebookChat__ = __webpack_require__(1);
 
 
-new __WEBPACK_IMPORTED_MODULE_0__FacebookChat__["a" /* default */](document.body, "https://res.cloudinary.com/demo/image/facebook/100007339754837.jpg");
-new __WEBPACK_IMPORTED_MODULE_0__FacebookChat__["a" /* default */](document.body, "https://res.cloudinary.com/demo/image/facebook/100007410902996.jpg");
-new __WEBPACK_IMPORTED_MODULE_0__FacebookChat__["a" /* default */](document.body, "https://res.cloudinary.com/demo/image/facebook/100007410902996.jpg");
+new __WEBPACK_IMPORTED_MODULE_0__FacebookChat__["a" /* default */](document.body, "https://res.cloudinary.com/demo/image/facebook/w_28,h_28/100007339754837.jpg");
+new __WEBPACK_IMPORTED_MODULE_0__FacebookChat__["a" /* default */](document.body, "https://res.cloudinary.com/demo/image/facebook/w_28,h_28/100007410902996.jpg");
+new __WEBPACK_IMPORTED_MODULE_0__FacebookChat__["a" /* default */](document.body, "https://res.cloudinary.com/demo/image/facebook/w_28,h_28/100007410902996.jpg");
 
 /***/ }),
 /* 1 */
@@ -165,6 +165,7 @@ class FacebookChat {
         let chat = this.root.querySelector(".chat");
         let messageBar = chat.getElementsByClassName("my-message")[1];
         let messages = messageBar.getElementsByClassName("my-message__text");
+        text = this.escapeHtml(text);
         if (text !== "") {
             messageBar.innerHTML += `
             <p class="my-message__text my-message__text_normal my-message_clear-fix">
@@ -188,6 +189,18 @@ class FacebookChat {
 
         chat.scrollTop = chat.scrollHeight - chat.clientHeight;
     }
+
+
+    escapeHtml(text) {
+        return text
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+    }
+
+
 }
 
 /* harmony default export */ __webpack_exports__["a"] = (FacebookChat);

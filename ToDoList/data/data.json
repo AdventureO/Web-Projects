@@ -1,70 +1,64 @@
 {
-  "tasks_1": [
+  "tasks": [
     {
-      "text": "Learn JavaScript and CSS",
+      "text": "Learn JavaScript",
       "checked": "",
-      "id": 2
+      "id": 1,
+      "list_id": 1
     },
     {
-      "text": "One more training",
+      "text": "Waret",
       "checked": "",
-      "id": 3
-    },
-    {
-      "text": "Do something",
-      "checked": "",
-      "id": 5
-    },
-    {
-      "text": "Prepare for marathon",
-      "checked": "",
-      "id": 6
-    },
-    {
-      "text": "Read about fetch",
-      "checked": "checked",
-      "id": 7
-    },
-    {
-      "text": "objects method and this",
-      "checked": "",
-      "id": 8
-    }
-  ],
-  "tasks_2": [
-    {
-      "text": "Learn Python and Django",
-      "checked": "checked",
+      "list_id": 1,
       "id": 4
     },
     {
-      "text": "Training",
+      "text": "Woooow",
       "checked": "",
+      "list_id": 1,
       "id": 5
     },
     {
-      "text": "Read 100 pages of a book",
+      "text": "ASsasda",
       "checked": "",
+      "list_id": 2,
       "id": 6
     },
     {
-      "text": "Read about context of function in js",
+      "text": "asdsadfgsdhgfda",
       "checked": "",
+      "list_id": 2,
       "id": 7
-    }
-  ],
-  "tasks_3": [
+    },
     {
-      "text": "water123",
+      "text": "asdf",
       "checked": "",
-      "id": 1
-    }
-  ],
-  "tasks_4": [
+      "list_id": 2,
+      "id": 8
+    },
     {
-      "text": "water123",
+      "text": "fsfsdfg",
       "checked": "",
-      "id": 1
+      "list_id": 1,
+      "id": 9
+    },
+    {
+      "text": "tyyti",
+      "checked": "",
+      "list_id": 2,
+      "id": 10
+    },
+    {
+      "text": "qweqwr",
+      "checked": "",
+      "list_id": 1,
+      "id": 11
+    },
+    {
+      "text": "asdasfasf as asf asf a",
+      "checked": "",
+      "list_id": 1,
+      "id": 12
     }
   ]
 }

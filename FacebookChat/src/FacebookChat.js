@@ -82,6 +82,7 @@ class FacebookChat {
         let chat = this.root.querySelector(".chat");
         let messageBar = chat.getElementsByClassName("my-message")[1];
         let messages = messageBar.getElementsByClassName("my-message__text");
+        text = this.escapeHtml(text);
         if (text !== "") {
             messageBar.innerHTML += `
             <p class="my-message__text my-message__text_normal my-message_clear-fix">
@@ -105,6 +106,18 @@ class FacebookChat {
 
         chat.scrollTop = chat.scrollHeight - chat.clientHeight;
     }
+
+
+    escapeHtml(text) {
+        return text
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+    }
+
+
 }
 
 export default FacebookChat;

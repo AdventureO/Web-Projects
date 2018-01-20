@@ -1,6 +1,7 @@
 class ToDoList {
-    constructor(container, host) {
+    constructor(container, host, list_id) {
         this.host = host;
+        this.list_id = list_id;
         this.root = document.createElement("div");
         this.root.innerHTML = this.initRender();
         this.root.classList.add("to-do-list");
@@ -26,7 +27,7 @@ class ToDoList {
     }
 
     async getData() {
-        let response = await fetch(this.host);
+        let response = await fetch(this.host + "?list_id=" + this.list_id);
         this.data = await response.json();
         this.render();
     }
@@ -70,17 +71,18 @@ class ToDoList {
 
         let form = ev.target;
         let text = form["task"].value;
+        let list_id = this.list_id;
         let checked = "";
 
         if (text == '') {
             alert("Write a task!!!")
         } else {
-            const response = await fetch(this.host, {
+            const response = await fetch(this.host + "?list_id=" + this.list_id, {
                 method: "POST",
                 headers: {
                     "Content-type": "application/json"
                 },
-                body: JSON.stringify({text, checked})
+                body: JSON.stringify({text, checked, list_id})
             });
 
             form["task"].value = '';
@@ -94,7 +96,10 @@ class ToDoList {
         const button = ev.target;
         if (button.classList.contains("task__remove-button")) {
             const id = button.parentElement.getAttribute("taskId");
-            await fetch(this.host + id, {method: "DELETE"});
+            alert(this.host + "?list_id=" + this.list_id + "&id=" + id);
+            await fetch(this.host + "?list_id=" + this.list_id + "&id=" + id, {
+                    method: "DELETE"
+                });
             const index = this.data.findIndex((el) => el.id == id);
             this.data = this.data.slice(0, index).concat(this.data.slice(index + 1));
             this.render();
@@ -122,7 +127,7 @@ class ToDoList {
                             textNode.textContent = text;
                             t.removeChild(editInput);
                             textNode.style.zIndex = 0;
-                            await fetch(this.host + id, {
+                            await fetch(this.host + "?list_id=" + this.list_id + "&id=" + id, {
                                 method: 'PATCH',
                                 headers: {
                                     "Content-type": "application/json"
@@ -159,7 +164,7 @@ class ToDoList {
                 parentNode.classList.remove("task_checked");
                 parentNode.children[1].setAttribute("class", "task__text");
             }
-            await fetch(this.host + id, {
+            await fetch(this.host + "?list_id=" + this.list_id + "&id=" + id, {
                 method: 'PATCH',
                 headers: {
                     "Content-type": "application/json"
