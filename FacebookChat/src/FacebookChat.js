@@ -18,9 +18,9 @@ class FacebookChat {
 
     initRender() {
         return `
-        <header class="header">
-            <div class="header__presence"></div>
-            <a href="" class="header__name">Kristaps Elsins</a>
+        <header class="chat-header">
+            <div class="chat-header__presence"></div>
+            <a href="" class="chat-header__name">Kristaps Elsins</a>
             <a href=""><img src="images/Close.svg" alt="" class="chat-option chat-option_close"></a>
             <a href=""><img src="images/Cog.svg" alt="" class="chat-option chat-option_cog"></a>
             <a href=""><img src="images/Video.svg" alt="" class="chat-option chat-option_video"></a>
