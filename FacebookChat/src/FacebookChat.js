@@ -28,14 +28,14 @@ class FacebookChat {
         </header>
         <section class="chat">
             <div class="message message_friend">
-                <img src="${this.image}" alt="" class="message__user-image">
+                <img src="${this.image}" alt="Your Friend" class="message__user-image">
                 <p class="message__text message__text_friend message__text_friend-normal">
                     Yo, Can you update views?
                 </p>
             </div>
             <time class="chat__date">FRI 11:30AM</time>
             <div class="message message_friend clear-fix">
-                <img src="${this.image}" alt="" class="message__user-image">
+                <img src="${this.image}" alt="Your Friend" class="message__user-image">
                 <p class="message__text message__text_friend message__text_friend-normal">
                     I can’t see updated views yet
                 </p>
@@ -49,7 +49,7 @@ class FacebookChat {
                 </p>
             </div>
             <div class="message message_friend clear-fix">
-                <img src="${this.image}" alt="" class="message__user-image">
+                <img src="${this.image}" alt="Your Friend" class="message__user-image">
                 <p class="message__text message__text_friend message__text_friend-upper">
                     Ahh sorry, missed that!
                 </p>

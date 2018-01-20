@@ -98,7 +98,11 @@ class ToDoList {
             const id = button.parentElement.getAttribute("taskId");
             alert(this.host + "?list_id=" + this.list_id + "&id=" + id);
             await fetch(this.host + "?list_id=" + this.list_id + "&id=" + id, {
-                    method: "DELETE"
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                method: "DELETE"
                 });
             const index = this.data.findIndex((el) => el.id == id);
             this.data = this.data.slice(0, index).concat(this.data.slice(index + 1));
