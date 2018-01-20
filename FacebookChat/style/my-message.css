@@ -1,17 +1,6 @@
 .my-message {
     margin-right: 18px;
 }
-.my-message__date {
-    width: 100px;
-    height: 14px;
-    font-size: 10px;
-    font-weight: bold;
-    letter-spacing: 0.3px;
-    text-align: left;
-    color: #828282;
-    display: block;
-    margin: 0 auto;
-}
 
 .my-message__text {
     max-width: 162px;
@@ -24,11 +13,13 @@
     color: #ffffff;
     margin-top: 1px;
     margin-bottom: 0;
+    display: table;
+    word-break: break-word;
 }
 
 
 .my-message__text_normal{
-    border-radius: 100px;
+    border-radius: 14px;
 }
 
 .my-message__text_upper {

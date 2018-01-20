@@ -72,9 +72,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__FacebookChat__ = __webpack_require__(1);
 
 
-new __WEBPACK_IMPORTED_MODULE_0__FacebookChat__["a" /* default */](document.body);
-new __WEBPACK_IMPORTED_MODULE_0__FacebookChat__["a" /* default */](document.body);
-new __WEBPACK_IMPORTED_MODULE_0__FacebookChat__["a" /* default */](document.body);
+new __WEBPACK_IMPORTED_MODULE_0__FacebookChat__["a" /* default */](document.body, "https://res.cloudinary.com/demo/image/facebook/100007339754837.jpg");
+new __WEBPACK_IMPORTED_MODULE_0__FacebookChat__["a" /* default */](document.body, "https://res.cloudinary.com/demo/image/facebook/100007410902996.jpg");
+new __WEBPACK_IMPORTED_MODULE_0__FacebookChat__["a" /* default */](document.body, "https://res.cloudinary.com/demo/image/facebook/100007410902996.jpg");
 
 /***/ }),
 /* 1 */
@@ -82,7 +82,8 @@ new __WEBPACK_IMPORTED_MODULE_0__FacebookChat__["a" /* default */](document.body
 
 "use strict";
 class FacebookChat {
-    constructor(container) {
+    constructor(container, image) {
+        this.image = image;
         this.root = document.createElement("div");
         this.root.innerHTML = this.initRender();
         this.root.classList.add("chat-box");
@@ -90,7 +91,12 @@ class FacebookChat {
 
         this.root
             .querySelector(".form")
-            .addEventListener("submit", this.addMessage.bind(this))
+            .addEventListener("submit", this.addMessage.bind(this));
+
+        let message = document.createElement("div");
+        message.classList = "my-message my-message_clear-fix";
+        let chat = this.root.querySelector(".chat");
+        chat.appendChild(message)
     }
 
     initRender() {
@@ -105,14 +111,14 @@ class FacebookChat {
         </header>
         <section class="chat">
             <div class="friend-message">
-                <img src="images/userphoto1.jpg" alt="" class="friend-message__user-image">
+                <img src="${this.image}" alt="" class="friend-message__user-image">
                 <p class="friend-message__text friend-message__text_normal">
                     Yo, Can you update views?
                 </p>
             </div>
             <time class="chat__date">FRI 11:30AM</time>
             <div class="friend-message">
-                <img src="images/userphoto1.jpg" alt="" class="friend-message__user-image">
+                <img src="${this.image}" alt="" class="friend-message__user-image">
                 <p class="friend-message__text friend-message__text_normal">
                     I can’t see updated views yet
                 </p>
@@ -126,7 +132,7 @@ class FacebookChat {
                 </p>
             </div>
             <div class="friend-message friend-message_clear-fix">
-                <img src="images/userphoto1.jpg" alt="" class="friend-message__user-image">
+                <img src="${this.image}" alt="" class="friend-message__user-image">
                 <p class="friend-message__text friend-message__text_upper">
                     Ahh sorry, missed that!
                 </p>
@@ -157,15 +163,26 @@ class FacebookChat {
         let form = ev.target;
         let text = form["message"].value;
         let chat = this.root.querySelector(".chat");
-
+        let messageBar = chat.getElementsByClassName("my-message")[1];
+        let messages = messageBar.getElementsByClassName("my-message__text");
         if (text !== "") {
-            chat.innerHTML += `
-                <div class="my-message friend-message_clear-fix">
-                    <p class="my-message__text my-message__text_middle">
-                        ${text}
-                    </p>
-                </div>
-                `;
+            messageBar.innerHTML += `
+            <p class="my-message__text my-message__text_normal my-message_clear-fix">
+                ${text}
+            </p>
+            `;
+            if (messages.length > 1) {
+                for (let i = 0; i < messages.length; i++) {
+                    if (i === 0) {
+                        messages[i].classList = "my-message__text my-message__text_upper my-message_clear-fix";
+                    } else if (i === messages.length - 1) {
+                        messages[i].classList = "my-message__text my-message__text_down my-message_clear-fix";
+                    } else {
+                        messages[i].classList = "my-message__text my-message__text_middle my-message_clear-fix";
+                    }
+                }
+            }
+
             form["message"].value = "";
         }
 

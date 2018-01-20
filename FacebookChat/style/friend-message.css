@@ -2,19 +2,6 @@
     margin-left: 16px;
 }
 
-.friend-message__date {
-    width: 100px;
-    height: 14px;
-    font-size: 10px;
-    font-weight: bold;
-    letter-spacing: 0.3px;
-    text-align: left;
-    color: #828282;
-    margin: 0 auto;
-    clear: both;
-    display: block;
-}
-
 .friend-message__user-image {
     clear: both;
     width: 28px;
@@ -33,11 +20,13 @@
     margin-left: 36px;
     background-color: #f3f3f3;
     color: #353535;
+    display: table;
+    word-break: break-all;
 }
 
 .friend-message__text_normal {
     border-radius: 100px;
-    margin-top: 8px;
+    margin-top: 9px;
     margin-bottom: 8px;
 }
 

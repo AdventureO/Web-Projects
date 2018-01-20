@@ -8,12 +8,12 @@
 }
 
 .chat__date {
-    width: 100px;
+    width: 100%;
     height: 14px;
     font-size: 10px;
     font-weight: bold;
     letter-spacing: 0.3px;
-    text-align: left;
+    text-align: center;
     color: #828282;
     display: block;
     margin: 0 auto;
