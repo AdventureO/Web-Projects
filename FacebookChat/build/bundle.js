@@ -73,6 +73,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 new __WEBPACK_IMPORTED_MODULE_0__FacebookChat__["a" /* default */](document.querySelector(".container"), "100007339754837");
+new __WEBPACK_IMPORTED_MODULE_0__FacebookChat__["a" /* default */](document.querySelector(".container1"), "100007339754837");
+new __WEBPACK_IMPORTED_MODULE_0__FacebookChat__["a" /* default */](document.querySelector(".container2"), "100007339754837");
 
 
 /***/ }),
@@ -93,7 +95,7 @@ class FacebookChat {
             .addEventListener("submit", this.addMessage.bind(this));
 
         let message = document.createElement("div");
-        message.classList = "my-message my-message_clear-fix";
+        message.classList = "message message_my clear-fix";
         let chat = this.root.querySelector(".chat");
         chat.appendChild(message)
     }
@@ -162,8 +164,8 @@ class FacebookChat {
         let form = ev.target;
         let text = form["message"].value;
         let chat = this.root.querySelector(".chat");
-        let messageBar = chat.getElementsByClassName("my-message")[1];
-        let messages = messageBar.getElementsByClassName("my-message__text");
+        let messageBar = chat.getElementsByClassName("message message_my")[1];
+        let messages = messageBar.getElementsByClassName("message__text_my");
         text = this.escapeHtml(text);
         if (text !== "") {
             messageBar.innerHTML += `
